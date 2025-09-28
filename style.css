@@ -1,0 +1,90 @@
+/* General Body and Font Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    /* A soft, modern gradient background */
+    background: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Ensures the gradient fills the entire screen */
+}
+
+/* Main "BUDGET CALCULATOR" Title */
+h2.text-center {
+    color: #1A237E; /* A deep, trustworthy navy blue */
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+/* The Login Card */
+.auth-card {
+    background-color: #FFFFFF;
+    border: none;
+    border-radius: 15px; /* Softer, modern corners */
+    /* A subtle shadow to make the card "float" */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease-in-out;
+}
+
+.auth-card:hover {
+    transform: translateY(-5px); /* Adds a slight lift on hover */
+}
+
+/* "LOGIN" Title inside the card */
+.auth-card h3 {
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+/* Styling for input fields */
+.auth-card input {
+    background-color: #f8f9fa; /* Light gray background for contrast */
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    padding: 12px 15px !important; /* Overrides default padding for better spacing */
+    width: 100%;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Style for when an input field is clicked (in focus) */
+.auth-card input:focus {
+    outline: none;
+    border-color: #80bdff; /* Blue highlight on focus */
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+
+/* Custom Login Button Style */
+.btn-custom {
+    background-color: #2ECC71; /* A vibrant, friendly green */
+    color: #FFFFFF;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    width: 100%;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover effect for the button */
+.btn-custom:hover {
+    background-color: #27ae60; /* A slightly darker green */
+    transform: translateY(-2px); /* Adds a subtle lift effect */
+    box-shadow: 0 4px 15px rgba(46, 204, 113, 0.4);
+}
+
+/* Styling for the "Don't have an account?" text */
+.auth-card p {
+    font-size: 0.9rem;
+    color: #6c757d; /* Soft gray text */
+}
+
+.auth-card a {
+    color: #1A237E; /* Match the main title color */
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.auth-card a:hover {
+    text-decoration: underline;
+}

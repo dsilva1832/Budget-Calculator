@@ -4,15 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- css -->
+    <link rel="stylesheet" href="style.css">
     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-
 </head>
-<body style="background-color: aquamarine;">
+
+<style>
+    .body{
+        background-image: url(https://4kwallpapers.com/images/wallpapers/candlestick-pattern-2560x1080-13788.png);
+        background-position: center;
+        background-size: auto ;
+        background-repeat: no-repeat;
+    }
+</style>
+
+<body class="body" >
     <div class="container">
         <div>
             <button type="button" class="btn btn-danger mt-1" style="float: right;" onclick="logout()">Logout</button>
-            <h4 style="float: left;" id="welcome">Welcome User</h4>
+            <h4 style="float: left;" id="welcome" class="text-light">Welcome User</h4>
         </div>
         
         <h1 class="text-center pt-5">BUDGET CALCULATOR</h1>
@@ -20,17 +33,17 @@
         <div class="row row-cols-1 row-cols-xl-2 row-cols-lg-2 row-cols-md-1 row-cols-sm-1 text-center d-flex align-items-center justify-content-around ">
             <div class="col rounded mt-sm-2 mt-2 " style="height: 150px;width: 200px; background-color:rgb(252, 213, 141)">
                 <h3 class="pt-2">Total Balance</h3>
-                <h3 id="incomedisplay" class="mt-5 ">0 Rs</h3>
+                <h3 id="incomedisplay" class="mt-5 ">Rs 0</h3>
             </div>
             <div class="col rounded mt-sm-2 mt-2" style="height: 150px;width: 200px; background-color: rgb(252, 213, 141)">
                 <h3 class="pt-2 ">Total Expense</h3>
-                <h3 id="expensedisplay" class="mt-5"> 0 Rs</h3>
+                <h3 id="expensedisplay" class="mt-5">Rs 0</h3>
             </div>
         </div>
 
           <div class="row row-cols-1 row-cols-xl-2 row-cols-lg-2 row-cols-md-1 row-cols-sm-1 text-center d-flex align-items-center justify-content-around ">
              <div class="col text-center py-3 ">
-            <h3 /*class="text-success"*/>Add Income</h3>
+            <h3 class="text-light">Add Income</h3>
             <!-- <hr class="w-75 mx-auto border border-1 border-success">  -->
 
             <form action="" id="incomeform">
@@ -40,18 +53,26 @@
             </form>
         </div>
             <div class="col text-center py-3 ">
-            <h3 /*class="text-success"*/>Add Income</h3>
+            <h3 class="text-light">Add Expense</h3>
             <!-- <hr class="w-75 mx-auto border border-1 border-success">  -->
 
-            <form action="" id="incomeform">
-                <input id="incometype" type="text" class="form-control  w-75 mx-auto " placeholder="Enter Income Type"><br>
-                <input id="incomeamt" type="text" class="form-control w-75 mx-auto " placeholder="Enter Amount"><br>
-                <button onclick="addExpense(event)" class="btn btn-primary px-2 fw-medium  w-75">Add Income</button>
+            <form action="" id="expenseform">
+                <input id="expensetype" type="text" class="form-control  w-75 mx-auto " placeholder="Enter Expense Type"><br>
+                <input id="expenseamt" type="text" class="form-control w-75 mx-auto " placeholder="Enter Amount"><br>
+                <button onclick="addExpense(event)" class="btn btn-primary px-2 fw-medium  w-75">Add Expense</button>
             </form>
         </div>
         </div>
+
+        <div class="row">
+            <div class="col text-center mt-5">
+                <button onclick="clearAll()" type="button" class="btn btn-secondary w-100">Clear all</button>
+            </div>
+        </div>
         
     </div>
+    <footer class="text-white text-center fixed-bottom">&copy;Budget Calculator-September 2025, All Rights Reserved to &reg;Alwin Joseph Dsilva</footer>
+
 </body>
 <script src="./script.js"></script>
 
