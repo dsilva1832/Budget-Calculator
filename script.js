@@ -55,8 +55,12 @@ let loginUser=localStorage.getItem('loggedkey')
 welcome.innerHTML=`Welcome ${loginUser.toUpperCase()}`
 
 function logout(){
-    localStorage.clear()
-    window.location='index.html'
+    let log=confirm("Confirm Logout?")
+    if(log)
+    {
+        localStorage.clear()
+        window.location='index.html'
+    }
 }
 
 function displayIncomeExpense(){
@@ -111,7 +115,6 @@ function addExpense(event){
             alert("expense added successfully")
             document.getElementById("expenseform").reset();
             displayIncomeExpense();
-            // location.reload();
         }
     }
 }
